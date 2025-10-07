@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amogh Portfolio</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #30343F; 
+    color: #FAFAFF; 
+  }
+
+  nav {
+    background: #E4D9FF; 
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  nav .logo {
+    font-size: 22px;
+    color: #273469; 
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #273469; 
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #1E2749;  }
+
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 50px;
+    background: #273469; 
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    margin: 30px auto;
+    max-width: 1100px;
+  }
+
+  .home img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15%;
+    border: 3px solid #E4D9FF;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+
+  .intro h1 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #E4D9FF;
+  }
+
+  .intro p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #FAFAFF;
+    max-width: 500px;
+  }
+
+  .about {
+    background: #1E2749;
+    padding: 60px 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  }
+
+  .about h2 {
+    color: #E4D9FF;
+    font-size: 28px;
+  }
+
+  .about p {
+    color: #FAFAFF;
+    font-size: 16px;
+    max-width: 900px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+  }
+
+  .projects {
+    background: #273469;
+    padding: 40px 20px;
+    border-radius: 15px;
+    max-width: 1100px;
+    margin: 40px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  }
+
+  .projects h2 {
+    color: #E4D9FF;
+    margin-bottom: 30px;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px; 
+  }
+
+  .project {
+    background: #1E2749;
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1 1 280px; 
+    max-width: 320px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  }
+
+  .project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .project h3 {
+    color: #E4D9FF;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .project p {
+    font-size: 14px;
+    color: #FAFAFF;
+  }
+
+  .contact {
+    background: #30343F;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  }
+
+  .contact h2 {
+    color: #E4D9FF;
+  }
+
+  .contact a {
+    color: #FAFAFF;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+    color: #FFC107;
+  }
+
+  @media(max-width: 900px) {
+    .intro h1 {
+      font-size: 24px;
+    }
+    .projects {
+      padding: 30px 15px;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .home {
+      flex-direction: column;
+      text-align: center;
+    }
+    nav ul {
+      gap: 15px;
+    }
+  }
+
+  @media(max-width: 500px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+      padding: 15px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Amogh</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="home" class="home">
+  <div class="intro">
+    <h1>Hello! I am Amogh Desurkar</h1>
+    <p>
+      A first-year student at Scaler School of Technology, diving deep into all things tech.
+      Passionate about web development, I enjoy building interactive and visually appealing projects.
+    </p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    Hi! I’m Amogh Desurkar, a first-year student at <strong>Scaler School of Technology</strong>.<br>
+    I’m passionate about coding, web development, and learning new technologies.<br>
+    From HTML, CSS, and JavaScript to frameworks like React, I love experimenting and turning ideas into interactive projects.<br>
+    Apart from coding, I enjoy problem-solving, exploring tech innovations, and building creative solutions.
+  </p>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="list">
+
+    <div class="project">
+      <img src="https://images.emojiterra.com/google/android-12l/512px/1f310.png" alt="Portfolio Website">
+      <h3>🌐 Portfolio Website</h3>
+      <p>This is the website you are viewing now! Built with HTML, CSS, and JS to showcase my work and skills.</p>
+    </div>
+
+    <div class="project">
+      <img src="https://miro.medium.com/v2/resize:fit:1200/0*ugVE7GUIioRi7MjL.gif" alt="Small 2D Game">
+      <h3>🎮 Small 2D Game: The Little Keeper</h3>
+      <p>A fun little 2D game where the player navigates challenges and collects items. Built using JavaScript and Canvas API.</p>
+    </div>
+
+    <div class="project">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/068/470/383/small_2x/colorful-ferris-wheel-spinning-animation-video.jpg" alt="Ferris Wheel">
+      <h3>💡 Ferris Wheel</h3>
+      <p>A creative project simulating a Ferris wheel with interactive animation, showcasing my skills in DOM manipulation and animations.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>
+    Instagram: <a href="https://instagram.com/amogh._.d" target="_blank">@amogh._.d</a><br>
+    GitHub: <a href="https://github.com/Amogh-Desurkar" target="_blank">Amogh-Desurkar</a><br>
+    LinkedIn: <a href="https://linkedin.com/in/amogh-desurkar" target="_blank">Amogh Desurkar</a>
+  </p>
+</section>
+
+</body>
+</html>
